@@ -1,0 +1,37 @@
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: TRACE
+        orm:
+          jdbc:
+            bind: TRACE
+server:
+  port: 10101
+spring:
+  application:
+    name: pharmacy-admin-api
+  datasource:
+    hikari:
+      max-lifetime: 2000000
+      connection-timeout: 30000
+      idle-timeout: 30000
+      maximum-pool-size: 10
+      minimum-idle: 5
+    tomcat:
+      initial-size: 10
+      max-wait: 2000000
+      max-active: 20
+      max-idle: 20
+      min-idle: 5
+      default-auto-commit: true
+  jpa:
+    open-in-view: true
+  profiles:
+    active: ${SPRING_ACTIVE_PROFILE:dev}
+springdoc:
+  packagesToScan: mx.loal.pharmacy_admin_api.controller
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html

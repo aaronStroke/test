@@ -1,0 +1,30 @@
+jasper:
+  templates: ${JASPER_TEMPLATES:/Farmacia/templates}
+pdf:
+  destination: ${PDF_DESTINATION:/Farmacia/recipes}
+spring:
+  datasource:
+#    url: jdbc:postgresql://${DATABASE_HOST:localhost}:${DATABASE_PORT:5432}/${DATABASE_DB:farmacia_db}
+#    username: ${DATABASE_USERNAME:farmacia_db_user}
+#    password: ${DATABASE_PASSWORD:MB#1%tyYo9)H}
+#    url: jdbc:postgresql://ep-little-snowflake-aaefdv69.westus3.azure.neon.tech/farmacia_loal
+#    username: farmacia_loal_owner
+#    password: npg_V4njLM9JfiOX
+    url: jdbc:postgresql://${DATABASE_HOST:ep-little-snowflake-aaefdv69.westus3.azure.neon.tech}/${DATABASE_BD:farmacia_loal}?&sslmode=require
+    username: farmacia_loal_owner
+    password: npg_V4njLM9JfiOX
+  jpa:
+    hibernate:
+      ddl-auto: update
+application:
+  security:
+    jwt:
+      secret-key: ${JWT_SECRET_KEY:adef760a77fd57aebbc322ad744ee640e35f32e5d304eccbac7810f7f6013721bac35e0261cd854860e5b432b0cf59e3c34260efafb16f18a802d9da4370ab3b}
+      expiration: ${JWT_ACCESS_EXPIRATION:43200000}
+      refresh-token:
+        expiration: ${JWT_REFRESH_EXPIRATION:43200000}
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG

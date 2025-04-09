@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fontFamilies>
+  <fontFamily name="OpenSans">
+    <normal>jasper/fonts/OpenSans/OpenSans-Light.ttf</normal>
+    <bold>jasper/fonts/OpenSans/OpenSans-Regular.ttf</bold>
+    <italic>jasper/fonts/OpenSans/OpenSans-Italic.ttf</italic>
+    <boldItalic>jasper/fonts/OpenSans/OpenSans-SemiboldItalic.ttf</boldItalic>
+    <pdfEncoding>Cp1252</pdfEncoding>
+    <pdfEmbedded>true</pdfEmbedded>
+    <exportFonts>
+    </exportFonts>
+  </fontFamily>
+  <fontFamily name="Arial">
+    <normal>jasper/fonts/Arial/arial.ttf</normal>
+    <bold>jasper/fonts/Arial/arialbd.ttf</bold>
+    <pdfEncoding>Cp1252</pdfEncoding>
+    <pdfEmbedded>true</pdfEmbedded>
+    <exportFonts>
+    </exportFonts>
+  </fontFamily>
+</fontFamilies>

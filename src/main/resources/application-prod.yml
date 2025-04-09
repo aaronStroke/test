@@ -1,0 +1,16 @@
+jasper:
+  templates: ${JASPER_TEMPLATES}
+pdf:
+  destination: ${PDF_DESTINATION}
+spring:
+  datasource:
+    url: jdbc:postgresql://${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_DB}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+application:
+  security:
+    jwt:
+      secret-key: ${JWT_SECRET_KEY}
+      expiration: ${JWT_ACCESS_EXPIRATION}
+      refresh-token:
+        expiration: ${JWT_REFRESH_EXPIRATION}
